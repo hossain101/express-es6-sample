@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Node.js dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Transpiling ES6 source files with Babel..."
+      - npm run transpile
+  post_build:
+    commands:
+      - echo "Build completed successfully on $(date)"
+
+artifacts:
+  files:
+    - '**/*'

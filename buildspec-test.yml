@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies for unit testing..."
+      - npm install
+  build:
+    commands:
+      - echo "Running Jest automated unit test suite..."
+      - npm test -- --watchAll=false
+  post_build:
+    commands:
+      - echo "All unit tests passed successfully!"

@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo "Transpiling ES6 source files with Babel..."
-      - npm run transpile
+      - npm run build
   post_build:
     commands:
       - echo "Build completed successfully on $(date)"
